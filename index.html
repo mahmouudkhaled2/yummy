@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy | Delicious Meals: Ingredients, Origins, & Recipes</title>
+    <link rel="icon" href="./images/logo.png">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<main class="container px-5">
+    <!--Side Navbar -->
+    <nav class="side-navbar">
+        <div class="d-flex justify-content-between h-100">
+            <div class="menu h-100 p-4 d-flex flex-column justify-content-between">
+                <ul class="m-0 p-0 text-white position-relative">
+                    <li id="home" data-section=".home" class="nav-link py-2">Home</li>
+                    <li id="search" data-section=".search-page" class="nav-link py-2">Search</li>
+                    <li id="catg" data-section=".categories" class="nav-link py-2">Categories</li>
+                    <li id="area" data-section=".area-page" class="nav-link py-2">Area</li>
+                    <li id="ing" data-section=".ing-page" class="nav-link py-2">Ingredients</li>
+                    <li id="contact" data-section=".contact-page" class="nav-link py-2">Contact Us</li>
+                </ul>
+                <div class="nav-footer">
+                    <div>
+                        <a href="#0" class="text-white"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#0" class="text-white"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#0" class="text-white"><i class="fa-solid fa-globe"></i></a>
+                    </div>
+                    <p class="text-white">Copyright Â© 2019 All Rights Reserved.</p>
+                </div>
+            </div>
+            <div class="display-nav h-100 bg-white py-4">
+                <div class="content h-100 px-2 d-flex flex-column justify-content-between align-items-center">
+                    <img data-section=".home" src="./images/logo.png" class="nav-link" alt="website logo">
+                    <span class="open-nav"><i class="fa-solid fa-bars fs-2"></i></span>
+                    <span class="close-nav d-none"><i class="fa-solid fa-x fs-2 "></i></span>
+                    <div class="links d-flex flex-column">
+                        <a href="#0" class="text-dark"><i class="fa-solid fa-globe"></i></a>
+                        <a href="#0" class="text-dark"><i class="fa-solid fa-share-nodes"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Start Point Section Home -->
+    <section class="home py-5">
+        <div class="container">
+            <div class="row g-4 ps-5"></div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-page py-5 d-none">
+        <div class="container">
+            <div class="row ps-5">
+                <div class="col-md-6">
+                    <div class="mb-4 mb-md-0">
+                        <input type="text" class="search-input form-control" id="byNameInput" placeholder="Search By Name" value="">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="">
+                        <input type="text" class="search-input form-control" id="byFirstLetterInput" placeholder="Search By Name" maxlength="1" value="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row data-row g-4 ps-5 pt-5"></div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories d-none py-5">
+        <div class="container">
+            <div class="row main-row g-4 ps-5"></div>
+            <div class="row meals-row g-4 ps-5 d-none"></div>
+        </div>
+    </section>
+
+    <!-- Area Section -->
+    <section class="area-page d-none py-5">
+        <div class="container">
+            <div class="row main-row g-4 ps-5"></div>
+            <div class="row meals-row g-4 ps-5">
+<!-- 
+                    <div data-id="${myData[i].idMeal}" class="meal col-md-3">
+                        <div class="cursor rounded overflow-hidden position-relative">
+                            <img src="./images/image-test-1.jpg" class="w-100" alt="">
+                            <div class="overlay w-100 h-100 position-absolute d-flex align-items-center p-3">
+                                <h2 class="fw-semibold">${myData[i].strMeal}</h2>
+                            </div>
+                        </div>
+                    </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Ingredients Section -->
+    <section class="ing-page d-none py-5">
+        <div class="container">
+            <div class="row main-row g-4 ps-5"></div>
+            <div class="row meals-row g-4 ps-5"></div>
+        </div>
+        
+    </section>
+
+    <!-- Contacts Section -->
+    <section class="contact-page py-5 d-none">
+        <div class="container">
+            <div class="form w-100 ps-5 mx-auto">
+                <div class="row g-4 mb-4">
+                    <div class="col-lg-6">
+                        <div>
+                            <input type="text" class="form-control" id="name" placeholder="Enter Your Name">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div>
+                            <input type="text" class="form-control" id="email" placeholder="Enter Your Email">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4 mb-4">
+                    <div class="col-lg-6">
+                        <div>
+                            <input type="text" class="form-control" id="phone" placeholder="Enter Your Phone">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div>
+                            <input type="text" class="form-control" id="age" placeholder="Enter Your Age">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4 mb-4">
+                    <div class="col-lg-6">
+                        <div>
+                            <input type="text" class="form-control" id="password" placeholder="Enter Your Password">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div>
+                            <input type="text" class="form-control" id="repassword" placeholder="Re-Password">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn d-block m-auto px-4 py-2 rounded text-danger fw-medium">Submit</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Details Section -->
+    <section class="details py-5 d-none">
+        <div class="container">
+
+            <div class="row ps-5">
+              <div class="col-md-4">
+                <div class="image">
+                  <img src="" alt="meal image" class="meal-img w-100 rounded">
+                  <h2 class="meal-name mt-2 text-white"></h2>
+                </div>
+              </div>
+    
+              <div class="col-md-8">
+                <div class="meal-details pt-4 pt-md-0 text-white">
+                  <h3 class="instrctions-title fs-2"></h3>
+                  <p class="instructions"></p>
+                  <div class="d-flex gap-2 fs-3">
+                    <span class="area-title m-0 align-items-center fw-bold"></span>
+                    <span class="meal-area fw-medium text-warning"></span>
+                  </div>
+
+                  <div class="d-flex gap-2 fs-3">
+                    <span class="cat-title m-0 align-items-center fw-bold"></span>
+                    <span class="meal-category fw-medium text-warning"></span>
+                  </div>
+
+                  <div class="my-4">
+                    <h3 class="recipes-heading mb-3"></h3>
+                    <div class='recipes-box d-flex flex-wrap gap-2 '>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <h3 class="tags-heading mb-3"></h3>
+                    <div class='tags-box d-flex flex-wrap gap-2 '>
+                    </div>
+                  </div>
+                  <div class="meal-btns">
+
+                  </div>
+
+                </div>
+              </div>
+    
+            </div>
+          </div>
+    </section>
+
+    <!-- Load Spinner -->
+    <div class="loading position-absolute top-0 start-0 end-0 bottom-0 justify-content-center align-items-center bg-white bg-opacity-25 d-none">
+        <div class="loader"></div>
+    </div>
+
+</main>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>
