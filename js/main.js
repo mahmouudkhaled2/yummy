@@ -32,14 +32,6 @@ $('.nav-link').click(function() {
     $('.open-nav').removeClass('d-none')
 })
 
-// $('.logo').click(function() {
-//     $(`${$(this).attr('data-section')}`).siblings('section').addClass('d-none')
-//     $(`${$(this).attr('data-section')}`).removeClass('d-none')
-//     $('.side-navbar').animate({'left': '-285px'}, 500)
-//     $('.close-nav').addClass('d-none')
-//     $('.open-nav').removeClass('d-none')
-// }) 
-
 /* Check if form data is valid */
 
 document.addEventListener('DOMContentLoaded', () => {
