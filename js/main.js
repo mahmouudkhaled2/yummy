@@ -33,7 +33,6 @@ $('.nav-link').click(function() {
 })
 
 /* Check if form data is valid */
-
 document.addEventListener('DOMContentLoaded', () => {
     const formInputs = {
         name: document.getElementById('name'),

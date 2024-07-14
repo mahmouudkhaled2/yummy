@@ -1,7 +1,5 @@
 export class Form 
 {
-
-
     static isValidName(name){
         const regex = /^[a-zA-Z0-9\s]{3,}$/g
         return regex.test(name)
@@ -28,4 +26,5 @@ export class Form
         const regex = /^(?=.*[a-zA-Z])[a-zA-Z0-9!@#$%^&*(),.?":{}|<>]{8,}$/g;
         return regex.test(password)
     }
+
 }

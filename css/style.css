@@ -1,7 +1,8 @@
 html {
     height: auto;
+    font-family: "Fira Sans", sans-serif;
 }
-body , .side-navbar{
+body , .side-navbar {
     background-color: #0d0d0d;
 }
 ul {
@@ -35,8 +36,8 @@ p, h1, h2, h3, h4, h5, h6 {
     top: 120px;
 }
 
-.menu ul .nav-link {
-    cursor: pointer;
+.nav-link {
+    cursor: pointer !important;
 }
 
 .display-nav img {

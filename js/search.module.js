@@ -1,16 +1,19 @@
-import { Details } from "./details.module.js";
 import { Ui } from "./ui.module.js";
+import { Assistant } from "./assist.js"
 
 export class Search {
+
   constructor() {
-    this.row = document.querySelector(".search-page .data-row");
     this.ui = new Ui();
+    this.api = new Assistant()
+    this.row = document.querySelector(".search-page .data-row");
 
     document.querySelectorAll(".search-input").forEach((input) => {
       input.addEventListener("input", () => {
-        if (input.id === "byNameInput" && input.value != "") {
+        if (input.id === "byNameInput" && input.value !== '') {
           this.getSearchData(`s=${input.value}`);
-        } else if (input.id === "byFirstLetterInput") {
+        } 
+        else if (input.id === "byFirstLetterInput" && input.value !== '') {
           this.getSearchData(`f=${input.value}`);
         }
       });
@@ -18,8 +21,8 @@ export class Search {
   }
 
   async getSearchData(value) {
-    $(".loading").removeClass("d-none");
-    $("body").addClass("overflow-hidden");
+
+    this.api.showLoader()
 
     const url = `https://www.themealdb.com/api/json/v1/1/search.php?${value}`;
     const api = await fetch(url);
@@ -27,22 +30,14 @@ export class Search {
     if (response.meals && response.meals.length > 20) {
       response.meals.length = 20;
     }
-
     if (response.meals != null){
       this.ui.displayMeals(response, this.row)
     }else {
       this.row.innerHTML = ``
     }
+    
+    this.api.runDetails('.item')
 
-    document.querySelectorAll(".item").forEach((item) => {
-      item.addEventListener("click", () => {
-        $(".details").removeClass("d-none");
-        $(".details").siblings().addClass("d-none");
-        new Details().getMealDetails(item.dataset.id);
-      });
-    });
-
-    $(".loading").addClass("d-none");
-    $("body").removeClass("overflow-hidden");
+    this.api.hideLoader()
   }
 }
