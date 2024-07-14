@@ -39,7 +39,6 @@
                 <div class="content h-100 px-2 d-flex flex-column justify-content-between align-items-center">
                     <div>
                         <img data-section=".home" src="./images/logo.png" class="nav-link" alt="website logo">
-                        <span data-section=".home" class="nav-link fs-6 fw-bold">Yummy</span>
                     </div>
                     <span class="open-nav"><i class="fa-solid fa-bars fs-2"></i></span>
                     <span class="close-nav d-none"><i class="fa-solid fa-x fs-2 "></i></span>
@@ -113,13 +112,13 @@
                     <div class="col-lg-6">
                         <div>
                             <input type="text" class="form-control" id="name" placeholder="Enter Your Name">
-                            <span></span>
+                            <span id="nameAlert" class="text-danger mt-1 ms-3 d-none">unavailable name</span>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div>
                             <input type="text" class="form-control" id="email" placeholder="Enter Your Email">
-                            <span></span>
+                            <span id="emailAlert" class="text-danger mt-1 ms-3 d-none">Invalid email | example@mail.com</span>
                         </div>
                     </div>
                 </div>
@@ -128,13 +127,13 @@
                     <div class="col-lg-6">
                         <div>
                             <input type="text" class="form-control" id="phone" placeholder="Enter Your Phone">
-                            <span></span>
+                            <span id="phoneAlert" class="text-danger mt-1 ms-3 d-none">Invalid phone number</span>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div>
                             <input type="text" class="form-control" id="age" placeholder="Enter Your Age">
-                            <span></span>
+                            <span id="ageAlert" class="text-danger mt-1 ms-3 d-none">Age is required | must be greater than 10</span>
                         </div>
                     </div>
                 </div>
@@ -143,13 +142,13 @@
                     <div class="col-lg-6">
                         <div>
                             <input type="password" class="form-control" id="password" placeholder="Enter Your Password">
-                            <span></span>
+                            <span id="passAlert" class="text-danger mt-1 ms-3 d-none">Enter valid password *Minimum eight characters, at least one letter and one number:*</span>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div>
                             <input type="password" class="form-control" id="repassword" placeholder="Re-Password">
-                            <span></span>
+                            <span id="repassAlert" class="text-danger mt-1 ms-3 d-none">Enter valid repassword</span>
                         </div>
                     </div>
                 </div>
