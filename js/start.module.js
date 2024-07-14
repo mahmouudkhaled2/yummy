@@ -6,9 +6,6 @@ import { Ingriedients } from "./ingredients.module.js"
 import { Form } from "./form.module.js"
 import { Details } from "./details.module.js"
 
-
-
-
 export class Start {
     constructor () {
         this.homeData = document.querySelector('.home .row')
@@ -41,6 +38,5 @@ export class Start {
 
         $('.loading').addClass('d-none')
         $('body').removeClass('overflow-hidden')
-        $('section').fadeIn()
     }
 }

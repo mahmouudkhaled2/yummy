@@ -28,5 +28,4 @@ export class Form
         const regex = /^(?=.*[a-zA-Z])[a-zA-Z0-9!@#$%^&*(),.?":{}|<>]{8,}$/g;
         return regex.test(password)
     }
-
 }

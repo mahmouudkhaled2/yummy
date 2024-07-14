@@ -24,10 +24,15 @@ export class Search {
     const url = `https://www.themealdb.com/api/json/v1/1/search.php?${value}`;
     const api = await fetch(url);
     const response = await api.json();
-    if (response.meals.length > 20) {
+    if (response.meals && response.meals.length > 20) {
       response.meals.length = 20;
     }
-    this.ui.displayMeals(response, this.row);
+
+    if (response.meals != null){
+      this.ui.displayMeals(response, this.row)
+    }else {
+      this.row.innerHTML = ``
+    }
 
     document.querySelectorAll(".item").forEach((item) => {
       item.addEventListener("click", () => {
